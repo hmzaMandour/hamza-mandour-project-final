@@ -11844,5 +11844,104 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+nav {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 4vw;
+}
+nav h2, nav .h2 {
+  font-size: 40px;
+  color: black;
+}
+nav h2 span, nav .h2 span {
+  color: rgb(213, 53, 53);
+}
+nav .links-button {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+nav .links-button .links {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+nav .links-button .links .a1 {
+  text-decoration: none;
+  color: rgb(78, 78, 89);
+}
+nav .links-button .links .a1:hover {
+  color: rgb(213, 53, 53);
+}
+nav .links-button label i {
+  color: white;
+  font-size: 25px;
+}
+nav .btn1 {
+  background-color: rgb(213, 53, 53);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 2vw;
+}
+nav .btn1:hover {
+  opacity: 0.9;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+.first-section p {
+  text-align: center;
+  width: 40vw;
+}
+.first-section h1, .first-section .h1 {
+  font-family: satisfy;
+  font-weight: 700;
+  font-size: 40px;
+}
+.first-section h1 span, .first-section .h1 span {
+  color: rgb(255, 176, 59);
+  font-family: satisfy;
+}
+.first-section .buttons {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+.first-section .btn2 {
+  background-color: transparent;
+  color: white;
+  padding: 7px 1.5vw;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 160, 18);
+}
+.first-section .btn2:hover {
+  background-color: rgb(255, 176, 59);
+}
+.first-section .btn3 {
+  background-color: transparent;
+  color: white;
+  padding: 7px 4vw;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 160, 18);
+}
+.first-section .btn3:hover {
+  background-color: rgb(255, 176, 59);
+}
+
+#check {
+  display: none;
+}
+
+.menu, .close {
+  display: none;
+}
 
 /*# sourceMappingURL=app.css.map */
