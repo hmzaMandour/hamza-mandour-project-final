@@ -12093,4 +12093,38 @@ nav .btn1:hover {
   color: white;
 }
 
+.section5 {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.section5 .topDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+.section5 .topDiv .content {
+  text-align: center;
+}
+
+.nav-link {
+  border: 2px solid rgb(213, 53, 53);
+}
+
+#menu {
+  padding: 7vh 4vw;
+}
+#menu h2, #menu .h2 {
+  text-align: center;
+}
+#menu h2 span, #menu .h2 span {
+  color: rgb(213, 53, 53);
+}
+#menu p {
+  text-align: center;
+  color: rgb(151, 155, 155);
+}
+#menu .smalldiv h2, #menu .smalldiv .h2 {
+  color: rgb(213, 53, 53);
+}
+
 /*# sourceMappingURL=app.css.map */
