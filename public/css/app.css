@@ -12000,4 +12000,65 @@ nav .btn1:hover {
   font-size: 10px;
 }
 
+.section3 {
+  padding: 10vh 4vw;
+  background-color: rgb(242, 242, 242);
+  display: flex;
+  justify-content: space-between;
+}
+.section3 .firstDiv {
+  background-color: rgb(206, 18, 18);
+  padding: 20px;
+}
+.section3 .firstDiv h2, .section3 .firstDiv .h2 {
+  width: 22vw;
+  color: white;
+}
+.section3 .firstDiv p {
+  width: 25vw;
+  color: white;
+}
+.section3 .firstDiv .button {
+  text-align: center;
+}
+.section3 .firstDiv .button button {
+  background-color: rgba(191, 62, 62, 0.8);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 35px;
+  color: white;
+  transition: 0.5s;
+}
+.section3 .firstDiv .button button:hover {
+  background: white;
+  color: rgba(191, 62, 62, 0.8);
+}
+.section3 .secondDiv {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding: 50px 20px;
+  transition: 0.2s;
+}
+.section3 .secondDiv:hover i {
+  background-color: rgb(206, 18, 18);
+  color: white;
+}
+.section3 .secondDiv i {
+  font-size: 30px;
+  background-color: rgb(238, 206, 206);
+  border-radius: 50%;
+  padding: 10px 14px;
+  color: rgb(206, 18, 18);
+}
+.section3 .secondDiv h4, .section3 .secondDiv .h4 {
+  width: 16vw;
+}
+.section3 .secondDiv p {
+  width: 15vw;
+}
+
 /*# sourceMappingURL=app.css.map */
