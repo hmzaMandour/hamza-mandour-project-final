@@ -11846,11 +11846,14 @@ textarea.form-control-lg {
   }
 }
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
+  width: 100vw;
   background-color: white;
   align-items: center;
   justify-content: space-between;
-  padding: 2vh 4vw;
+  padding: 4vh 4vw;
 }
 nav h2, nav .h2 {
   font-size: 40px;
@@ -11899,6 +11902,7 @@ nav .btn1 {
   border: none;
   border-radius: 20px;
   padding: 7px 2vw;
+  transition: 0.3s;
 }
 nav .btn1:hover {
   opacity: 0.9;
@@ -11913,11 +11917,12 @@ nav .btn1:hover {
 }
 
 .section1 {
+  margin-top: 10vh;
   background-color: rgb(242, 242, 242);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7vh 4vw;
+  padding: 10vh 4vw;
 }
 .section1 .h1p {
   display: flex;
@@ -11940,6 +11945,7 @@ nav .btn1:hover {
   border: none;
   border-radius: 20px;
   padding: 7px 2vw;
+  transition: 0.3s;
 }
 .section1 .btn2:hover {
   opacity: 0.9;
@@ -12059,6 +12065,32 @@ nav .btn1:hover {
 }
 .section3 .secondDiv p {
   width: 15vw;
+}
+
+.section4 {
+  background-image: url(../images/Yummy/stats-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 17vh;
+}
+.section4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.section4 div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
