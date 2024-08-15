@@ -30,14 +30,11 @@
         font-weight: 600
         border: none
         transition: 0.3s
-        position: relative
         &:hover 
             color: rgb(213, 53, 53)
         i
-            position: absolute
             color: rgb(213, 53, 53)
-            left: -35%
-            top: -19%
+           
             font-size: 35px
         
     @keyframes up-down
@@ -47,3 +44,16 @@
             transform: translateY(25px)
     .move
         animation: up-down 2s  infinite alternate-reverse both
+
+
+
+@media  ( max-width: 430px )
+    .section1
+        flex-direction: column-reverse
+        gap: 4vh
+        img
+            width: 350px
+        h1
+            width: 70vw
+        p
+            width: 80vw

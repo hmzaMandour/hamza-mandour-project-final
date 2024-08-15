@@ -11975,6 +11975,30 @@ form button:hover {
   display: none;
 }
 
+@media (max-width: 430px) {
+  nav .links-button .links {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 2%;
+    flex-direction: column;
+    gap: 3vh;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: start;
+    align-items: start;
+    padding: 5vh 0 5vh 5vw;
+  }
+  nav .links-button .links .a1 {
+    color: black;
+  }
+}
+.menu {
+  display: flex;
+}
+
 .section1 {
   margin-top: 10vh;
   background-color: rgb(242, 242, 242);
@@ -12014,16 +12038,12 @@ form button:hover {
   font-weight: 600;
   border: none;
   transition: 0.3s;
-  position: relative;
 }
 .section1 .btn3:hover {
   color: rgb(213, 53, 53);
 }
 .section1 .btn3 i {
-  position: absolute;
   color: rgb(213, 53, 53);
-  left: -35%;
-  top: -19%;
   font-size: 35px;
 }
 @keyframes up-down {
@@ -12038,6 +12058,21 @@ form button:hover {
   animation: up-down 2s infinite alternate-reverse both;
 }
 
+@media (max-width: 430px) {
+  .section1 {
+    flex-direction: column-reverse;
+    gap: 4vh;
+  }
+  .section1 img {
+    width: 350px;
+  }
+  .section1 h1, .section1 .h1 {
+    width: 70vw;
+  }
+  .section1 p {
+    width: 80vw;
+  }
+}
 .section2 {
   padding: 12vh 4vw;
   display: flex;
@@ -12089,6 +12124,18 @@ form button:hover {
   font-size: 10px;
 }
 
+@media (max-width: 430px) {
+  .section2 .bigDiv {
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .section2 .imgDiv img {
+    width: 400px;
+  }
+  .section2 .left-side {
+    width: 80vw;
+  }
+}
 .section3 {
   padding: 10vh 4vw;
   background-color: rgb(242, 242, 242);
@@ -12150,6 +12197,21 @@ form button:hover {
   width: 15vw;
 }
 
+@media (max-width: 430px) {
+  .section3 {
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .section3 .firstDiv h2, .section3 .firstDiv .h2 {
+    width: 80vw;
+  }
+  .section3 .firstDiv p {
+    width: 85vw;
+  }
+  .section3 .secondDiv h4, .section3 .secondDiv .h4, .section3 .secondDiv p {
+    width: 85vw;
+  }
+}
 .section4 {
   background-image: url(../images/Yummy/stats-bg.jpg);
   background-position: center;
@@ -12179,6 +12241,12 @@ form button:hover {
   z-index: 9999;
 }
 
+@media (max-width: 430px) {
+  .section4 .content {
+    flex-direction: column;
+    gap: 5vh;
+  }
+}
 .section5 {
   display: flex;
   flex-direction: column;
@@ -12239,6 +12307,12 @@ form button:hover {
   }
 }
 
+@media (max-width: 430px) {
+  .section5 .topDiv {
+    flex-direction: column;
+    gap: 8vh;
+  }
+}
 .section6 {
   background-color: rgb(242, 242, 242);
   display: flex;
@@ -12338,6 +12412,23 @@ form button:hover {
   background-color: black;
 }
 
+@media (max-width: 430px) {
+  .section6 .carousel h6, .section6 .carousel .h6 {
+    width: 100vw;
+  }
+  .carousel-container {
+    width: 70vw;
+  }
+  .slide {
+    flex-direction: column;
+    gap: 3vw;
+    justify-content: start;
+    width: 90vw;
+  }
+  .carousel {
+    gap: 15vw;
+  }
+}
 .section7 {
   padding: 10vh;
 }
@@ -12442,6 +12533,126 @@ footer .inside-footer .footer-icons i {
 footer .inside-footer .footer-icons i:hover {
   color: rgb(213, 53, 53);
   border: 1px solid rgb(213, 53, 53);
+}
+
+.carousel2 {
+  background-image: url(../images/Yummy/events-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33vw;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+.carousel2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.carousel2 .content {
+  display: flex;
+}
+.carousel2 .content div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 9999;
+}
+
+.carousel3 {
+  background-image: url(../images/Yummy/events-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33vw;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+.carousel3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.carousel3 .content {
+  display: flex;
+}
+.carousel3 .content div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 9999;
+}
+
+.carousel4 {
+  background-image: url(../images/Yummy/events-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33vw;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+.carousel4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.carousel4 .content {
+  display: flex;
+}
+.carousel4 .content div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 9999;
+}
+
+.carousel5 {
+  background-image: url(../images/Yummy/events-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33vw;
+  height: 80vh;
+  color: white;
+  position: relative;
+}
+.carousel5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.carousel5 .content {
+  display: flex;
+}
+.carousel5 .content div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 9999;
 }
 
 /*# sourceMappingURL=app.css.map */
