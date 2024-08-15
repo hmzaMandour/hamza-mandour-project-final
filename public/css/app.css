@@ -12410,4 +12410,38 @@ form button:hover {
   z-index: 999;
 }
 
+footer {
+  background-color: rgb(31, 31, 36);
+  color: white;
+  padding: 10vh 4vw 0 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+footer .inside-footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer .inside-footer .content {
+  display: flex;
+  gap: 2vw;
+}
+footer .inside-footer .content i {
+  font-size: 30px;
+  color: rgb(213, 53, 53);
+}
+footer .inside-footer .footer-icons {
+  display: flex;
+  gap: 2vw;
+}
+footer .inside-footer .footer-icons i {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+footer .inside-footer .footer-icons i:hover {
+  color: rgb(213, 53, 53);
+  border: 1px solid rgb(213, 53, 53);
+}
+
 /*# sourceMappingURL=app.css.map */
