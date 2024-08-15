@@ -3,12 +3,8 @@ let starters = document.querySelector("#starters")
 let breakfast = document.querySelector("#breakfast")
 let lunch = document.querySelector("#lunch")
 let dinner = document.querySelector("#dinner")
-let login = document.querySelector(".btn1")
 
 
-login.addEventListener("click" , ()=>{
-    
-})
 
 starters.addEventListener("click",()=>{
     let a = document.querySelector(".title")
@@ -120,14 +116,10 @@ containers.forEach(container => {
 
 let modal = document.getElementById("loginModal");
 let btn = document.querySelector(".btn1");
-let span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
     modal.style.display = "block";
 }
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

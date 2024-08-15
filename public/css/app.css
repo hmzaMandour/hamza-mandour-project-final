@@ -11963,6 +11963,10 @@ form button:hover {
   background-color: #e23333;
 }
 
+.div, .formm {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
 #check {
   display: none;
 }
@@ -11992,7 +11996,7 @@ form button:hover {
 }
 .section1 .buttons {
   display: flex;
-  gap: 2vw;
+  gap: 4vw;
 }
 .section1 .btn2 {
   background-color: rgb(213, 53, 53);
@@ -12007,7 +12011,20 @@ form button:hover {
 }
 .section1 .btn3 {
   background-color: transparent;
+  font-weight: 600;
   border: none;
+  transition: 0.3s;
+  position: relative;
+}
+.section1 .btn3:hover {
+  color: rgb(213, 53, 53);
+}
+.section1 .btn3 i {
+  position: absolute;
+  color: rgb(213, 53, 53);
+  left: -35%;
+  top: -19%;
+  font-size: 35px;
 }
 @keyframes up-down {
   0% {
@@ -12382,6 +12399,15 @@ form button:hover {
 
 .card:hover {
   transform: scale(1.1);
+}
+.card .img {
+  position: relative;
+}
+.card .img .wave img {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=app.css.map */
