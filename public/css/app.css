@@ -11854,6 +11854,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 4vh 4vw;
+  z-index: 9999;
 }
 nav h2, nav .h2 {
   font-size: 40px;
@@ -11953,6 +11954,17 @@ nav .btn1:hover {
 .section1 .btn3 {
   background-color: transparent;
   border: none;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(25px);
+  }
+}
+.section1 .move {
+  animation: up-down 2s infinite alternate-reverse both;
 }
 
 .section2 {
@@ -12072,9 +12084,6 @@ nav .btn1:hover {
   background-position: center;
   background-size: cover;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 17vh;
 }
 .section4::before {
   content: "";
@@ -12086,17 +12095,59 @@ nav .btn1:hover {
   background: #000;
   opacity: 0.5;
 }
-.section4 div {
+.section4 .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 17vh;
+}
+.section4 .content div {
   display: flex;
   align-items: center;
   flex-direction: column;
   color: white;
+  z-index: 9999;
 }
 
 .section5 {
   display: flex;
   flex-direction: column;
   gap: 4vh;
+}
+.section5 p {
+  text-align: center;
+  color: rgb(151, 155, 155);
+}
+.section5 h2, .section5 .h2 {
+  text-align: center;
+}
+.section5 h2 span, .section5 .h2 span {
+  color: rgb(213, 53, 53);
+}
+.section5 .btn {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+.section5 .btn button {
+  border: none;
+  background: transparent;
+  position: relative;
+}
+.section5 .btn button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgb(213, 53, 53);
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+.section5 .btn button:hover::after {
+  width: 100%;
+}
+.section5 .smalldiv h2, .section5 .smalldiv .h2 {
+  color: rgb(213, 53, 53);
 }
 .section5 .topDiv {
   display: flex;
@@ -12106,25 +12157,99 @@ nav .btn1:hover {
   text-align: center;
 }
 
-.nav-link {
-  border: 2px solid rgb(213, 53, 53);
+.section6 {
+  background-color: rgb(242, 242, 242);
+}
+.section6 p {
+  text-align: center;
+}
+.section6 h2, .section6 .h2 {
+  text-align: center;
+}
+.section6 h2 span, .section6 .h2 span {
+  color: rgb(213, 53, 53);
 }
 
-#menu {
-  padding: 7vh 4vw;
+.carousel {
+  display: flex;
+  justify-content: space-evenly;
 }
-#menu h2, #menu .h2 {
+.carousel .after {
+  position: relative;
+}
+.carousel .after::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: -5%;
+  background-color: rgb(213, 53, 53);
+}
+.carousel .after h6, .carousel .after .h6 {
+  width: 53vw;
+}
+.carousel div img {
+  border-radius: 50%;
+}
+
+.section7 {
+  padding: 10vh;
+}
+.section7 p {
   text-align: center;
 }
-#menu h2 span, #menu .h2 span {
-  color: rgb(213, 53, 53);
-}
-#menu p {
+.section7 h2, .section7 .h2 {
   text-align: center;
-  color: rgb(151, 155, 155);
 }
-#menu .smalldiv h2, #menu .smalldiv .h2 {
+.section7 h2 span, .section7 .h2 span {
   color: rgb(213, 53, 53);
+}
+.section7 .fromul {
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.section7 .fromul form {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.section7 .fromul .firstinputs {
+  display: flex;
+  gap: 3vw;
+}
+.section7 .fromul .firstinputs input {
+  width: 15vw;
+  padding: 7px;
+  border: 1px solid black;
+}
+.section7 .fromul .firstinputs input::placeholder {
+  padding-left: 5px;
+  color: rgb(187, 188, 189);
+}
+.section7 .fromul textarea {
+  width: 100%;
+  height: 20vh;
+  padding: 8px;
+}
+.section7 .fromul textarea::placeholder {
+  color: rgb(187, 188, 189);
+}
+.section7 .fromul .btn4 {
+  text-align: center;
+}
+.section7 .fromul .btn4 button {
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(213, 53, 53);
+  color: white;
+  padding: 12px 5vw;
+  transition: 0.3s;
+}
+.section7 .fromul .btn4 button:hover {
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,26 @@
+.section6
+    background-color: rgb(242, 242, 242)
+    p
+        text-align: center
+    h2
+        text-align: center
+        span
+            color: rgb(213, 53, 53)
+.carousel
+    display: flex
+    justify-content: space-evenly
+    .after
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            width:3px
+            height: 100%
+            top: 0
+            left: -5%
+            background-color: rgb(213, 53, 53) 
+        h6
+            width: 53vw
+    div
+        img
+            border-radius: 50%

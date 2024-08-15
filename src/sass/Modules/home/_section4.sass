@@ -3,9 +3,6 @@
     background-position: center
     background-size: cover
     position: relative
-    display: flex
-    justify-content: space-between
-    padding: 17vh 
     &::before
         content: ""
         position: absolute
@@ -15,8 +12,15 @@
         width:100%
         background: #000
         opacity: 0.5
-    div
+    .content
         display: flex
-        align-items: center
-        flex-direction: column
-        color: white
+        justify-content: space-between
+        padding: 17vh 
+        div
+            display: flex
+            align-items: center
+            flex-direction: column
+            color: white
+            z-index: 9999
+
+            

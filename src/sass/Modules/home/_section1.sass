@@ -28,3 +28,11 @@
     .btn3
         background-color: transparent
         border: none
+        
+    @keyframes up-down
+        0%
+            transform: translateY(0)
+        100%
+            transform: translateY(25px)
+    .move
+        animation: up-down 2s  infinite alternate-reverse both
