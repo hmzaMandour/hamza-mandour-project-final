@@ -44,10 +44,7 @@ nav
 
                 &:hover::after
                     width: 100%
-                    transition: 0.3s
-
-
-                    
+                    transition: 0.3s          
                     
         label
             i
@@ -63,12 +60,57 @@ nav
         &:hover
             opacity: 0.9
 
-.backdrop
-    background-color: white
-    #form
-        display: flex
-        flex-direction: column
-        align-items: center
+
+
+          
+
+.modal
+    display: none 
+    position: fixed 
+    background-color: rgba(0,0,0,0.7) 
+
+.modal-content
+    margin: 90px auto
+    padding: 20px
+    border: 1px solid #888
+    max-width: 400px
+    border-radius: 15px
+    position: relative
+.close
+    color: #aaa
+    float: right
+    font-size: 28px
+    font-weight: bold
+    position: absolute
+    top: 5px
+    right: 10px
+    &:hover,
+    &:focus
+        color: #000
+        text-decoration: none
+        cursor: pointer
+
+form
+    display: flex
+    flex-direction: column
+    gap: 3vh
+
+    input
+        padding: 10px
+        font-size: 16px
+        border: 1px solid #ddd
+        border-radius: 5px
+
+    button
+        padding: 10px
+        background-color: #ff4d4d
+        color: white
+        border: none
+        border-radius: 15px
+        cursor: pointer
+        font-size: 16px
+        &:hover
+            background-color: #e23333
 
 
 // .bgOpacity::before

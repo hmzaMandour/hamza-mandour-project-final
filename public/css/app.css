@@ -11909,13 +11909,58 @@ nav .btn1:hover {
   opacity: 0.9;
 }
 
-.backdrop {
-  background-color: white;
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.backdrop #form {
+
+.modal-content {
+  margin: 90px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 400px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 3vh;
+}
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+form button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+form button:hover {
+  background-color: #e23333;
 }
 
 #check {

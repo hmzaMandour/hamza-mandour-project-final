@@ -114,3 +114,22 @@ containers.forEach(container => {
     });
     indicatorsGrp.querySelector(".indicator").classList.add('activeIndicator')
 })
+
+
+
+
+let modal = document.getElementById("loginModal");
+let btn = document.querySelector(".btn1");
+let span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

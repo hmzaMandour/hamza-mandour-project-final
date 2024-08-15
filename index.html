@@ -31,6 +31,17 @@
       </div>
     </nav>
 
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="text-center">Login</h2>
+          <form>
+              <input type="text" id="username" placeholder="enter your username">
+              <input type="password" id="password" placeholder="enter your password">
+              <button type="submit">Login</button>
+          </form>
+      </div>
+  </div>
   
 
     <div class="section1">
@@ -49,6 +60,7 @@
         alt=""
       />
     </div>
+ 
 
     <div class="section2">
       <div>
@@ -669,14 +681,8 @@
     </div>
 
 
-    <div  class="backdrop">
-         <form action="" id="form">
-          <input type="email" placeholder="enter your email">
-          <input type="password" placeholder="enter your email">
-          <button>Submit</button>
-         </form>
-
-    </div>
+ 
+ 
    
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="./public/js/app.js"></script>
