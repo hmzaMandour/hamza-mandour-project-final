@@ -1,82 +1,57 @@
-// let nextBtns = document.querySelectorAll(".next")
-// let previousBtns = document.querySelectorAll(".previous")
-// let containers = document.querySelectorAll(".carousel-container")
-
-
-
-
-// //* auto slide 
-// containers.forEach(container => {
-//     //* check wach  l element 3ando attribute auto slide   
-//     if (container.getAttribute("autoslide")) {
-//         let nextBtn = container.querySelector(".next")
-
-//         setInterval(() => {
-//             //* method  kanwarek  biha  3la  btn 
-//             nextBtn.click()
-//         }, 3000);
-//     }
-// });
-
-// //* indicators 
-
-// containers.forEach(container => {
-//     //! variables  sal7in  ghir  l lelement  li mt7a9a9 fih chart dyalna  
-//     let slides = container.querySelectorAll(".slide")
-//     let indicatorsGrp = document.createElement("div")
-//     indicatorsGrp.classList.add("indicators-grp")
-//     container.appendChild(indicatorsGrp)
-
-//     slides.forEach(slide => {
-//         let indicator = document.createElement("div")
-//         indicator.classList.add("indicator")
-//         indicatorsGrp.appendChild(indicator)
-//     });
-//     indicatorsGrp.querySelector(".indicator").classList.add('activeIndicator')
-// });
-
-
 
 let starters = document.querySelector("#starters")
 let breakfast = document.querySelector("#breakfast")
 let lunch = document.querySelector("#lunch")
 let dinner = document.querySelector("#dinner")
+let login = document.querySelector(".btn1")
 
 
-
+login.addEventListener("click" , ()=>{
+    
+})
 
 starters.addEventListener("click",()=>{
     let a = document.querySelector(".title")
-    let b = document.querySelector(".topdiv")
+    let b = document.querySelector("#menu")
     a.textContent = "Starters"
-    b.style.animation = "up-down 2s ease-in-out  alternate-reverse both"
-   
+    b.classList.add("animated")
+    setTimeout(() => {
+        b.classList.remove("animated")
+    }, 3000);
 
 })
 breakfast.addEventListener("click",()=>{
     let a = document.querySelector(".title")
-    let b = document.querySelector(".topdiv")
+    let b = document.querySelector("#menu")
     a.textContent = "Breakfast"
-    b.style.animation = "up-down 2s ease-in-out  alternate-reverse both"
+    b.classList.add("animated")
+    setTimeout(() => {
+        b.classList.remove("animated")
+    }, 3000);
 
    
    
 })
 dinner.addEventListener("click",()=>{
     let a = document.querySelector(".title")
-    let b = document.querySelector(".topdiv")
+    let b = document.querySelector("#menu")
     a.textContent = "Dinner"
-    b.style.animation = "up-down 2s ease-in-out  alternate-reverse both"
-
+    b.classList.add("animated")
+    setTimeout(() => {
+        b.classList.remove("animated")
+    }, 3000);
   
 
    
 })
 lunch.addEventListener("click",()=>{
     let a = document.querySelector(".title")
-    let b = document.querySelector(".topdiv")
+    let b = document.querySelector("#menu")
     a.textContent = "Lunch"
-    b.style.animation = "up-down 2s ease-in-out  alternate-reverse both"
+    b.classList.add("animated")
+    setTimeout(() => {
+        b.classList.remove("animated")
+    }, 3000);
 
 
  
@@ -125,11 +100,6 @@ nextBtns.forEach(next => {
         next.click()
     }, 3000);
 });
-// 
-
-
-
-
 
 containers.forEach(container => {
     let slides = container.querySelectorAll(".slide")
@@ -143,4 +113,4 @@ containers.forEach(container => {
         indicatorsGrp.appendChild(indicator)
     });
     indicatorsGrp.querySelector(".indicator").classList.add('activeIndicator')
-});
+})
