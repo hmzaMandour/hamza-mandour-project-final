@@ -11971,7 +11971,7 @@ form button:hover {
   display: none;
 }
 
-.menu, .close {
+.menu, .closee {
   display: none;
 }
 
@@ -11979,26 +11979,26 @@ form button:hover {
   nav .links-button .links {
     display: none;
     position: fixed;
-    top: 10%;
-    left: 5%;
-    right: 5%;
-    bottom: 2%;
+    width: 90vw;
+    top: 90px;
+    left: 5vw;
+    right: 20%;
+    bottom: 50%;
     flex-direction: column;
     gap: 3vh;
     border-radius: 10px;
-    background-color: white;
+    background-color: grey;
     justify-content: start;
     align-items: start;
     padding: 5vh 0 5vh 5vw;
   }
   nav .links-button .links .a1 {
-    color: black;
+    color: white;
+  }
+  nav .menu {
+    display: flex;
   }
 }
-.menu {
-  display: flex;
-}
-
 .section1 {
   margin-top: 10vh;
   background-color: rgb(242, 242, 242);
@@ -12414,16 +12414,22 @@ form button:hover {
 
 @media (max-width: 430px) {
   .section6 .carousel h6, .section6 .carousel .h6 {
-    width: 100vw;
+    width: 60vw;
   }
   .carousel-container {
-    width: 70vw;
+    width: 85vw;
   }
   .slide {
     flex-direction: column;
     gap: 3vw;
     justify-content: start;
     width: 90vw;
+  }
+  img {
+    width: 200px;
+  }
+  .after {
+    width: 100%;
   }
   .carousel {
     gap: 15vw;

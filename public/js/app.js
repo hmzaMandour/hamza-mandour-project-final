@@ -125,3 +125,113 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
+
+let links = document.querySelector(".links")
+let menu = document.querySelector(".menu")
+let close = document.querySelector(".closee")
+menu.addEventListener("click" , ()=>{
+    links.style.display = "flex"
+    close.style.display = "flex"
+    menu.style.display  ="none"
+})
+close.addEventListener("click" , ()=>{
+    links.style.display = "none"
+    close.style.display = "none"
+    menu.style.display = "flex"
+
+})
+
+
+// let galleryContainer = document.querySelector(".gallery-container");
+// let galleryNavContainer = document.querySelector(".gallery-nav");
+// let galleryItems = document.querySelectorAll(".gallery-item");
+
+// class Carousel1 {
+//     constructor(container, items, nav) {
+//         this.carouselContainer = container;
+//         this.carouselArray = [...items];
+//         this.carouselNav = nav;
+//         this.currentItemIndex = 0;
+//         this.autoSlideInterval = null;
+//     }
+
+//     updateGallery() {
+//         this.carouselArray.forEach(ele => {
+//             ele.classList.remove("gallery-item-1")
+//             ele.classList.remove("gallery-item-2")
+//             ele.classList.remove("gallery-item-3")
+//             ele.classList.remove("gallery-item-4")
+//             ele.classList.remove("gallery-item-5")
+//             ele.classList.remove("gallery-item-6")
+//             ele.classList.remove("gallery-item-7")
+//             ele.classList.remove("gallery-item-8")
+//         })
+
+//         this.carouselArray.slice(0, 8).forEach((ele, i) => {
+//             ele.classList.add(`gallery-item-${i + 1}`)
+//         })
+
+//         this.updateIndicators()
+//     }
+
+//     updateIndicators() {
+//         if (this.carouselNav && this.carouselNav.childNodes.length > 0) {
+//             this.carouselNav.childNodes.forEach(indicator => {
+//                 if (indicator.classList) {
+//                     indicator.classList.remove('active')
+//                 }
+//             })
+//             if (this.currentItemIndex < this.carouselNav.childNodes.length) {
+//                 this.carouselNav.childNodes[this.currentItemIndex].classList.add('active')
+//             }
+//         }
+//     }
+
+//     setCurrentState(index) {
+//         this.currentItemIndex = index
+//         this.carouselArray = this.carouselArray.slice(index).concat(this.carouselArray.slice(0, index))
+//         this.updateGallery()
+//     }
+
+//     setIndicators() {
+//       while (this.carouselNav.firstChild) {
+//           this.carouselNav.removeChild(this.carouselNav.firstChild)
+//       }
+  
+//       this.carouselArray.forEach((index) => {
+//           let li = document.createElement('li')
+//           li.addEventListener('click', () => {
+//               this.setCurrentState(index)
+//               this.stopAutoSlide() 
+//           })
+//           this.carouselNav.appendChild(li)
+//       })
+
+//       this.updateIndicators()
+//   }
+  
+
+//     startAutoSlide() {
+//         this.autoSlideInterval = setInterval(() => {
+//             this.currentItemIndex = (this.currentItemIndex + 1) % this.carouselArray.length
+//             this.setCurrentState(this.currentItemIndex)
+//         }, 2000) 
+//     }
+
+//     stopAutoSlide() {
+//         clearInterval(this.autoSlideInterval)
+//     }
+
+//     init() {
+//         this.updateGallery()
+//         this.setIndicators()
+//         this.startAutoSlide()
+//     }
+// }
+
+// const exampleCarousel = new Carousel1(galleryContainer, galleryItems, galleryNavContainer)
+// exampleCarousel.init()
