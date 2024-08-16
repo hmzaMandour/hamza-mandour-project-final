@@ -55,8 +55,55 @@ lunch.addEventListener("click",()=>{
 
 
 
+
+
+let modal = document.getElementById("loginModal");
+let btn = document.querySelector(".btn1");
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+let links = document.querySelector(".links")
+let menu = document.querySelector(".menu")
+let close = document.querySelector(".closee")
+menu.addEventListener("click" , ()=>{
+    links.style.display = "flex"
+    close.style.display = "flex"
+    menu.style.display  ="none"
+})
+close.addEventListener("click" , ()=>{
+    links.style.display = "none"
+    close.style.display = "none"
+    menu.style.display = "flex"
+
+})
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+});
+
+
+
+
+
 let nextBtns = document.querySelectorAll(".next")
 let containers = document.querySelectorAll(".carousel-container")
+
 
 
 
@@ -114,124 +161,69 @@ containers.forEach(container => {
 
 
 
-let modal = document.getElementById("loginModal");
-let btn = document.querySelector(".btn1");
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 
 
+let nextBtns2 = document.querySelectorAll(".next2");
+let containers2 = document.querySelectorAll(".carousel-container2");
 
-let links = document.querySelector(".links")
-let menu = document.querySelector(".menu")
-let close = document.querySelector(".closee")
-menu.addEventListener("click" , ()=>{
-    links.style.display = "flex"
-    close.style.display = "flex"
-    menu.style.display  ="none"
-})
-close.addEventListener("click" , ()=>{
-    links.style.display = "none"
-    close.style.display = "none"
-    menu.style.display = "flex"
+let currentIndex2 = 0;
 
-})
+const slideImage2 = (index, myBtn) => {
+    let carouselBtnAttribute = myBtn.getAttribute("carouselBtn");
+
+    containers2.forEach(container => {
+        if (container.id == carouselBtnAttribute) {
+            let slides = container.querySelectorAll(".slide2");
+            let camera = container.querySelector(".carouselll");
+            let slideWidth = slides[0].clientWidth;
+            let indicators = container.querySelectorAll('.indicator1');
+
+            if (index < 0) {
+                index = slides.length - 1;
+            } else if (index >= slides.length) {
+                index = 0;
+            }
 
 
-// let galleryContainer = document.querySelector(".gallery-container");
-// let galleryNavContainer = document.querySelector(".gallery-nav");
-// let galleryItems = document.querySelectorAll(".gallery-item");
 
-// class Carousel1 {
-//     constructor(container, items, nav) {
-//         this.carouselContainer = container;
-//         this.carouselArray = [...items];
-//         this.carouselNav = nav;
-//         this.currentItemIndex = 0;
-//         this.autoSlideInterval = null;
-//     }
+            indicators.forEach(indicator => {
+                indicator.classList.remove('activeIndicator1');
+            });
+            indicators[index].classList.add("activeIndicator1");
 
-//     updateGallery() {
-//         this.carouselArray.forEach(ele => {
-//             ele.classList.remove("gallery-item-1")
-//             ele.classList.remove("gallery-item-2")
-//             ele.classList.remove("gallery-item-3")
-//             ele.classList.remove("gallery-item-4")
-//             ele.classList.remove("gallery-item-5")
-//             ele.classList.remove("gallery-item-6")
-//             ele.classList.remove("gallery-item-7")
-//             ele.classList.remove("gallery-item-8")
-//         })
+            camera.style.transform = `translateX(-${slideWidth * index}px)`;
+            currentIndex2 = index; 
+            if (currentIndex2 == slides) {
+                setTimeout(() => {
+                    currentIndex2=0
+                    camera.style.transform = translateX(0);
+                }, 500);
+            }
+        }
+    });
+};
 
-//         this.carouselArray.slice(0, 8).forEach((ele, i) => {
-//             ele.classList.add(`gallery-item-${i + 1}`)
-//         })
+nextBtns2.forEach(next => {
+    next.addEventListener("click", (event) => { slideImage2(currentIndex2 + 1, event.target) });
 
-//         this.updateIndicators()
-//     }
+    setInterval(() => {
+        next.click() 
+    }, 3000);
+});
 
-//     updateIndicators() {
-//         if (this.carouselNav && this.carouselNav.childNodes.length > 0) {
-//             this.carouselNav.childNodes.forEach(indicator => {
-//                 if (indicator.classList) {
-//                     indicator.classList.remove('active')
-//                 }
-//             })
-//             if (this.currentItemIndex < this.carouselNav.childNodes.length) {
-//                 this.carouselNav.childNodes[this.currentItemIndex].classList.add('active')
-//             }
-//         }
-//     }
+containers2.forEach(container => {
+    let slides = container.querySelectorAll(".slide2");
+    let indicatorsGrp = document.createElement("div");
+    indicatorsGrp.classList.add("indicators-grp");
+    container.appendChild(indicatorsGrp);
 
-//     setCurrentState(index) {
-//         this.currentItemIndex = index
-//         this.carouselArray = this.carouselArray.slice(index).concat(this.carouselArray.slice(0, index))
-//         this.updateGallery()
-//     }
+    slides.forEach(slide => {
+        let indicator = document.createElement("div");
+        indicator.classList.add("indicator1");
+        indicatorsGrp.appendChild(indicator);
+    });
 
-//     setIndicators() {
-//       while (this.carouselNav.firstChild) {
-//           this.carouselNav.removeChild(this.carouselNav.firstChild)
-//       }
-  
-//       this.carouselArray.forEach((index) => {
-//           let li = document.createElement('li')
-//           li.addEventListener('click', () => {
-//               this.setCurrentState(index)
-//               this.stopAutoSlide() 
-//           })
-//           this.carouselNav.appendChild(li)
-//       })
-
-//       this.updateIndicators()
-//   }
-  
-
-//     startAutoSlide() {
-//         this.autoSlideInterval = setInterval(() => {
-//             this.currentItemIndex = (this.currentItemIndex + 1) % this.carouselArray.length
-//             this.setCurrentState(this.currentItemIndex)
-//         }, 2000) 
-//     }
-
-//     stopAutoSlide() {
-//         clearInterval(this.autoSlideInterval)
-//     }
-
-//     init() {
-//         this.updateGallery()
-//         this.setIndicators()
-//         this.startAutoSlide()
-//     }
-// }
-
-// const exampleCarousel = new Carousel1(galleryContainer, galleryItems, galleryNavContainer)
-// exampleCarousel.init()
+    indicatorsGrp.querySelector(".indicator1").classList.add('activeIndicator1');
+});

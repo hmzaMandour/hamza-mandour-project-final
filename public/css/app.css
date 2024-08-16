@@ -11845,6 +11845,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: amatic;
+  src: url(public\f onts\a matic_SC/AmaticSC-Bold.ttf);
+}
 nav {
   position: fixed;
   top: 0;
@@ -12014,6 +12018,7 @@ form button:hover {
 }
 .section1 h1, .section1 .h1 {
   width: 33vw;
+  font-family: amatic;
 }
 .section1 p {
   width: 29vw;
@@ -12044,7 +12049,6 @@ form button:hover {
 }
 .section1 .btn3 i {
   color: rgb(213, 53, 53);
-  font-size: 35px;
 }
 @keyframes up-down {
   0% {
@@ -12085,6 +12089,7 @@ form button:hover {
 }
 .section2 .h2 {
   text-align: center;
+  font-family: amatic;
 }
 .section2 .h2 span {
   color: rgb(213, 53, 53);
@@ -12258,6 +12263,7 @@ form button:hover {
 }
 .section5 h2, .section5 .h2 {
   text-align: center;
+  font-family: amatic;
 }
 .section5 h2 span, .section5 .h2 span {
   color: rgb(213, 53, 53);
@@ -12326,6 +12332,7 @@ form button:hover {
 }
 .section6 h2, .section6 .h2 {
   text-align: center;
+  font-family: amatic;
 }
 .section6 h2 span, .section6 .h2 span {
   color: rgb(213, 53, 53);
@@ -12362,6 +12369,12 @@ form button:hover {
   position: relative;
   overflow: hidden;
   width: 70vw;
+}
+
+.carousel-container2 {
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
 }
 
 .carousel {
@@ -12443,6 +12456,7 @@ form button:hover {
 }
 .section7 h2, .section7 .h2 {
   text-align: center;
+  font-family: amatic;
 }
 .section7 h2 span, .section7 .h2 span {
   color: rgb(213, 53, 53);
@@ -12494,6 +12508,13 @@ form button:hover {
   opacity: 0.9;
 }
 
+.section8 h2, .section8 .h2 {
+  font-family: amatic;
+}
+.section8 h2 span, .section8 .h2 span {
+  color: rgb(213, 53, 53);
+}
+
 @media (max-width: 430px) {
   .section7 {
     display: flex;
@@ -12526,6 +12547,13 @@ form button:hover {
   bottom: 0%;
   left: 0%;
   z-index: 999;
+}
+
+.chef div h2, .chef div .h2 {
+  font-family: amatic;
+}
+.chef div h2 span, .chef div .h2 span {
+  color: rgb(206, 18, 18);
 }
 
 footer {
@@ -12689,6 +12717,65 @@ footer .inside-footer .footer-icons i:hover {
   flex-direction: column;
   color: white;
   z-index: 9999;
+}
+
+.carousel-container2 {
+  position: relative;
+  overflow: hidden;
+  width: 95vw;
+}
+
+.carouselll {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15vw;
+}
+
+.next2 {
+  padding: 1vh 2vw;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next2 {
+  display: none;
+}
+
+.indicators-grp1 {
+  width: 100%;
+  padding: 2vh 0;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.indicator1 {
+  padding: 5px;
+  background: rgb(213, 53, 53);
+  border-radius: 50%;
+}
+
+.activeIndicator1 {
+  background-color: black;
+}
+
+@media (max-width: 430px) {
+  .carousel2, .carousel3, .carousel4, .carousel5 {
+    width: 100vw;
+  }
+  .carousel-container2 {
+    width: 100vw;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
