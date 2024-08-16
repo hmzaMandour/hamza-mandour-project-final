@@ -12488,6 +12488,27 @@ form button:hover {
   opacity: 0.9;
 }
 
+@media (max-width: 430px) {
+  .section7 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+  .section7 .fromul {
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .section7 .fromul div img {
+    width: 90vw;
+  }
+  .section7 .fromul .firstinputs {
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .section7 .fromul .firstinputs input {
+    width: 90vw;
+  }
+}
 .card:hover {
   transform: scale(1.1);
 }
@@ -12535,6 +12556,15 @@ footer .inside-footer .footer-icons i:hover {
   border: 1px solid rgb(213, 53, 53);
 }
 
+@media (max-width: 430px) {
+  footer {
+    gap: 5vh;
+  }
+  footer .inside-footer {
+    flex-direction: column;
+    gap: 3vh;
+  }
+}
 .carousel2 {
   background-image: url(../images/Yummy/events-1.jpg);
   background-position: center;
